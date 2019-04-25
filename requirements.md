@@ -3,7 +3,7 @@
 ## API
 - API must be able to store data on each bathroom’s geojson location, what floor(s) it is on, if it has disability access, if it requires a key, if it is male/female/gender neutral, what building it is in, what the address of that building is.
 - The only people who can access or change this API are admins with specific API tokens (keys)
-- This API should be able to handle () amount of calls in () amount of seconds from () amount of sources
+- This API should be able to handle 5000 calls every second from at most 1000 sources
 - Admins should be able to add, delete and edit data about each bathroom in this API
 - Admins should be able to add new bathrooms and remove existing bathrooms from this api
 
