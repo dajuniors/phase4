@@ -86,3 +86,34 @@ filters -> filter bathrooms based on features selected
 #### Connection:
 Input: User’s Current Location, data about each bathroom from bathroom component or API
 Output: Render bathroom cards for each bathroom on the sidebar panel, each bathroom card will have all bathroom information, order will update based on user location, interacts with Input and Output component to render sidebar
+
+------------------------
+
+## API 
+
+#### Retriever
+* Location retriever - input is bathroom ID, output is the bathroom’s location
+This will give back the bathroom’s geojson location
+* Accessibility access retriver - input is bathroom ID, output is a boolean
+Returns a boolean based on if the accessibility access is True / False
+* Key access retriever  - input is bathroom ID, output is a boolean 
+Returns a boolean based on if the key access is needed (True) or not (False)
+* Gender retriever  - input is bathroom ID, output is a string 
+Returns a string based on if the bathroom is “male”, “female”, or “neutral”
+
+#### Add
+
+Bathroom adder - Input is the ID, location, accessibility access, key access, and gender. The information is then saved in our api / database
+
+#### Edit
+* Location editor - input is bathroom ID
+This will change the bathroom’s geojson location
+* Accessibility access editor - input is bathroom ID 
+This will change the bathroom’s accessibility access information
+* Key access editor  - input is bathroom ID
+This will change the bathroom’s key access information
+* Gender editor  - input is bathroom ID 
+This will change the bathroom’s gender information
+
+#### Delete
+Bathroom deleter - Input is the ID. All information about the bathroom is then deleted from our api / database
