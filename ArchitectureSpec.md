@@ -77,11 +77,12 @@ Output: renders the output on the web page
 ## Side Panel
 The component that renders the sidebar containing information about each bathroom
 
-Bathroom Card Component
+#### Functionality:
+getUserLocation -> gets the user location
+getDistance -> gets the user current location and calculates the distance in feet/miles away between the user’s current location and the bathroom’s location
+orderBy -> order location card by distance from user, or alphabetically
+filters -> filter bathrooms based on features selected
 
-Functionality:
-getDistance() gets the user current location and calculates the distance in feet/miles away between the user’s current location and the bathroom’s location
-
-Connection:
-Input: User’s Current Location, data about each bathroom from bathroom component or API?
-Output: Bathroom cards for each bathroom, Input and Output component to render the Side Panel
+#### Connection:
+Input: User’s Current Location, data about each bathroom from bathroom component or API
+Output: Render bathroom cards for each bathroom on the sidebar panel, each bathroom card will have all bathroom information, order will update based on user location, interacts with Input and Output component to render sidebar
