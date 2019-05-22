@@ -28,9 +28,12 @@
 
 ### Location Ask 
 * The website must prompt the user if we can use their current location every time the page refreshes (each times the user refreshes the tab) with a popup in the top left corner of the map.
+    * Manual Testing: Load the page to check if a popup appears requesting user for their location permission. It should be at the top left corner of the map. We will refresh the page and check if the popup appears again after a refresh. This will be tested 20 times total on 4 different devices to ensure the popup will appear in different devices. 
 * If the user chooses “block”, the map remains as an overview of all of the UW Seattle campus, from Montlake cut to NE 45th st, with all bathrooms marked as markers on the map and in alphabetical order on the right side panel. 
+    * Manual Testing: Load the website and choose to "block" the user's current location. Check that the map displays an overview of all of UW Seattle Campus from Montlake cut to NE 45th St. On the map, check that all bathrooms are marked as markers on the map. Check that the right side panel lists the bathrooms in alphabetical order based on building name. Check this 20 times total on 4 different devices.
 * If the user chooses “allow”, the map zooms in on their current location, which will be in the center of the map, showing a 1000 feet radius around their current location, with bathrooms marked as markers on the map that are within that 1000 feet radius. The right side panel will show the list of all bathrooms from nearest to farthest from the user’s current location.
-* Manual Testing and Integration Test: To test these requirements, we will be running manual tests. We will refresh the page multiple times in order to test if a popup appears prompting the user to use their current location. We can choose either to block or allow, and test if the correct results appear on the website. Then we can refresh the page and choose the other option to test the other result. 
+    * Manual Testing: Load the website and choose to "allow" access to the user's current location. Check that the map zoom into the user's current location, within 1000 feet of their actual location. Check that all markers within the radius should be marked as markers. Check that the right side panel displays bathrooms ordered by distance from the user's current location. 
+
 
 
 ### Filter
@@ -69,8 +72,9 @@ The width ratio between map and the right side panel should be 7:3 respectively.
 * The bathroom location cards on the sidebar must be sorted by the shortest distance to the current user, considering the user provided their current location.
     * Manual testing and code inspection: With code inspection, ensure bathrooms will be sorted in the correct order by checking code logic. 
 * The side panel should be scrollable.
+    *  Manual testing: Check that the side panel allows for scrolling functionality if there is more bathrooms that cannot fit the screen.
 * The location cards should show the subsequent cards (farther restrooms) in the list as the user scrolls down.
-    * * Manual testing: Ensure the side panel allows for scrolling of the location cards and farther restrooms are displayed. 
+    * Manual testing: Ensure the side panel allows for scrolling of the location cards and farther restrooms are displayed. 
 
 ### API’s
 * API must be able to store data on each bathroom’s geojson location, what floor(s) it is on, if it has disability access, if it requires a key, if it is male/female/gender neutral, what building it is in, what the address of that building is.
