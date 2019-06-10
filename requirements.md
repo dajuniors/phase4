@@ -14,7 +14,7 @@
 
 ## Asking for Location
 - The website must prompt the user if we can use their current location every time the page refreshes (each times the user refreshes the tab) with a popup in the top left corner of the map. `impossible`
-   * Impossible: This requirement is impossible as the permissions for geolocation is controlled by the browser. We cannot force the browser to reset the permissions settings and it is up to the user to update their permission through their browser. We searched ways to reset the permission or force request user permission upon refresh. We found similar questions on stackoverflow with answers stating that it is simply not possible. 
+   * Impossible: This requirement is impossible as the permissions for geolocation is controlled by the browser. We cannot force the browser to reset the permissions settings and it is up to the user to update their permission through their browser. We searched ways to reset the permission or force request user permission upon refresh. We found similar questions on stackoverflow with answers stating that it is simply not possible.
 https://stackoverflow.com/questions/27014154/how-do-i-reset-the-geo-location-service-settings-each-time-my-page-loads-with-ht
 https://stackoverflow.com/questions/8054005/how-to-make-google-maps-to-request-again-for-location-permissions
 - The popup will ask “www.OneRestroomAway.com wants to know your location” The user will be given two options: allow button and block button. `complete`
@@ -25,6 +25,7 @@ https://stackoverflow.com/questions/8054005/how-to-make-google-maps-to-request-a
 ## Map
 - User should be able to move the map via click and drag. `complete`
 - There will be a legend in the top right of the map, notating the “bathroom” markers and “your location” marker. `revised`
+  * Revised: Since the legend on the upper right corner will potentially overlap with the zooming icons on the map, we decided to put it on the lower right corner of the map.
 - Map will always have a layer with all of the red markers notating bathroom, and always have a blue dot notating the user’s location (if user allows webpage to use their location). `complete`
    - The red markers and current location (if user allows webpage to use their location) will always be on the correct geojson locations even when the map moves. `complete`
    - All markers will never be further than 500 feet of their actual location `complete`
@@ -44,6 +45,7 @@ https://stackoverflow.com/questions/8054005/how-to-make-google-maps-to-request-a
 ## Filtering
 - The user will need to click on the “filter bathrooms” tab to view the drop down list `revised`
 - The user will need to click on the “filter bathrooms” tab to close the drop down list `revised`
+  * Revised: We decided to go with a separate filter section instead of a dropdown list. It turned out a separate filter is easier to understand and it is also the option that many websites take for filters. i.e. Amazon
 - All filtering options are unchecked by default. `complete`
 - Users should be able to check both single and multiple filtering options. `complete`
 - The user has the ability to filter bathrooms by whether it offers disability access, whether it requires a key, what gender it can accomodate (male, female, gender neutral) `complete`
@@ -76,7 +78,7 @@ This was a design decision that was changed. When the user clicks on get directi
 - Users must be given walking directions from their starting location to the bathroom selected. `complete`
 - The map will show the path of the directions to the building where the bathroom is located from the user’s current location marker with a blue line. `complete`
 - There will be a left arrow for users to exit the directions functionality in the right side panel. When clicked, the view must return to the initial view of displaying bathrooms. `complete`
-- If the user gave their location, the map will be centered on the user’s location with at least a 150 ft radius. As the user follows the path, the blue path line will start disappearing so that the blue line only connects the destination and the user’s current location. `revised` 
+- If the user gave their location, the map will be centered on the user’s location with at least a 150 ft radius. As the user follows the path, the blue path line will start disappearing so that the blue line only connects the destination and the user’s current location. `revised`
 - If the user takes a different path than the one given to them, the directions will recalibrate and show them a new list of instructions from their new location to the destination. `revised`
 - If the user did not give their location, the map must show the starting location the user inputted, the bathroom destination, and the full path. `complete`
 
