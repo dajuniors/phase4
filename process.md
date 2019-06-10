@@ -11,7 +11,7 @@
 
 ## What coordination and planning practices will you follow? Identify daily scrums, sprint planning meetings, ad hoc meetings, or other ways of coordinating work.
 
-- We will meet during class time to work collaboratively as a group/resolve any issues we may be having on assigned tasks. 
+- We will meet during class time to work collaboratively as a group/resolve any issues we may be having on assigned tasks. We will mostly meet outside of class during class allocated time, but will attend class when we have questions for Andy/Selene.  
 - We will have meetings every Monday 7:30 pm. This meeting is used to plan our tasks for the upcoming week and discuss our progress. Each person will be assigned a task by our program manager to be worked on within the next few days.
 - We will have back-up meetings on Tuesdays/Wednesdays 8:30 pm as necessary based on if more time is needed by team members to complete their assigned tasks.
 
