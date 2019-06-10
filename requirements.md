@@ -13,7 +13,10 @@
 - The logo section in the right side panel will always display the app name, “OneRestroomAway” along with the logo. `complete`
 
 ## Asking for Location
-- The website must prompt the user if we can use their current location every time the page refreshes (each times the user refreshes the tab) with a popup in the top left corner of the map. `complete`
+- The website must prompt the user if we can use their current location every time the page refreshes (each times the user refreshes the tab) with a popup in the top left corner of the map. `impossible`
+   * Impossible: This requirement is impossible as the permissions for geolocation is controlled by the browser. We cannot force the browser to reset the permissions settings and it is up to the user to update their permission through their browser. We searched ways to reset the permission or force request user permission upon refresh. We found similar questions on stackoverflow with answers stating that it is simply not possible. 
+https://stackoverflow.com/questions/27014154/how-do-i-reset-the-geo-location-service-settings-each-time-my-page-loads-with-ht
+https://stackoverflow.com/questions/8054005/how-to-make-google-maps-to-request-again-for-location-permissions
 - The popup will ask “www.OneRestroomAway.com wants to know your location” The user will be given two options: allow button and block button. `complete`
 - When the page loads, before the user answers the popup, the map will start off as an overview of all of the UW Seattle campus, from Montlake cut to NE 45th st, with all bathrooms marked as markers on the map and in alphabetical order on the right side panel. `complete`
 - If the user chooses “block”, the map remains as an overview of all of the UW Seattle campus, from Montlake cut to NE 45th st, with all bathrooms marked as markers on the map and in alphabetical order on the right side panel. `complete`
@@ -55,16 +58,26 @@
 - The location cards should be scrollable. `complete`
 
 ## Directions
-- If the user clicks on the get directions button, the right side panel will show two stacked input boxes and a button with a right arrow below. The bottom input box (final destination box) will be pre populated with the marker bathroom’s address. `revised`
-- If the user allows their location to be used, the top input box will be pre-populated with their current location information `revised`
-- If the user does not allow their location to be used, the top input box will be initially empty, the user will need to fill that out. `revised`
-- The right arrow button cannot be clicked unless both input boxes are filled with valid addresses or building names. `revised`
-- If the user clicks the right arrow button, the right side panel will update into a list of walking directions from the starting location to the destination location. `revised`
+- If the user clicks on the get directions button, the right side panel will show two stacked input boxes and a button with a right arrow below. The bottom input box (final destination box) will be pre populated with the marker bathroom’s address. `revised` (see below for revisions)
+- If the user allows their location to be used, the top input box will be pre-populated with their current location information `revised` (see below for revisions)
+- If the user does not allow their location to be used, the top input box will be initially empty, the user will need to fill that out. `revised` (see below for revisions)
+- The right arrow button cannot be clicked unless both input boxes are filled with valid addresses or building names. `revised` (see below for revisions)
+- If the user clicks the right arrow button, the right side panel will update into a list of walking directions from the starting location to the destination location. `revised` (see below for revisions)
+
+**Revision for the 5 requirements above:**
+- If the user clicks on the get directions button, the right side panel will show the directions to the bathroom. This is dependant on whether or not the user allows their location.
+- If the user allows their location to be used, the right side panel will automatically change to the step by step directions to the bathroom.
+- If the user does not allow their location to be used, there will be an entry box for the user to enter their full starting address on the right side panel. When the user clicks enter, the right side panel will show step by step directions to the bathroom as long as the starting address can be found.
+- If the user inputs an invalid address or the starting location cannot be found, an error message will appear stating “Error: Cannot locate the address you have entered. Please enter the full address of your starting location.”
+
+**Reason:**
+This was a design decision that was changed. When the user clicks on get directions, it will automatically get directions between the user location and bathroom. This reduces the number of clicks by the user by one, providing for quicker access to the bathroom directions. If the user does not allow for their location, there will be only one input box and it will be for their starting location. This is the only information needed from the user to navigate to their selected bathroom. It prevents users from navigating to places other than the bathrooms provided as well, as directions are meant specificly between user to bathroom.
+
 - Users must be given walking directions from their starting location to the bathroom selected. `complete`
 - The map will show the path of the directions to the building where the bathroom is located from the user’s current location marker with a blue line. `complete`
 - There will be a left arrow for users to exit the directions functionality in the right side panel. When clicked, the view must return to the initial view of displaying bathrooms. `complete`
-- If the user gave their location, the map will be centered on the user’s location with at least a 150 ft radius. As the user follows the path, the blue path line will start disappearing so that the blue line only connects the destination and the user’s current location. `impossible`
-- If the user takes a different path than the one given to them, the directions will recalibrate and show them a new list of instructions from their new location to the destination. `impossible`
+- If the user gave their location, the map will be centered on the user’s location with at least a 150 ft radius. As the user follows the path, the blue path line will start disappearing so that the blue line only connects the destination and the user’s current location. `revised` 
+- If the user takes a different path than the one given to them, the directions will recalibrate and show them a new list of instructions from their new location to the destination. `revised`
 - If the user did not give their location, the map must show the starting location the user inputted, the bathroom destination, and the full path. `complete`
 
 ## Icons
@@ -77,6 +90,8 @@
 - A blue circle on the map denotes user’s current location (if user provides their location to the webpage). If the user does not provide their location to the webpage, then their location (the blue dot) will not be present on the map. `complete`
 - The icons on a marker’s pop up should match those that are used for the marker’s respective location card in the right side panel `complete`
 - The legend in the upper right hand corner of the map should include the image of the red marker icon and blue circle icon and show what each denotes (depending on if the user allows for location tracking). This legend should be present at all times on the map `revised`
+   * **Revision**: The legend on the lower right hand corner of the map should include the image of the red marker icon and blue circle icon and show what each denotes (depending on if the user allows for location tracking). This legend should be present at all times on the map.
+   * **Reason:** On the map, the zoom buttons are on the upper right hand corner. We moved the legend to the lower right hand corner to 
 
 ## Performance
 - The page should be able to fully load in at least 3 minutes. `complete`
