@@ -91,7 +91,7 @@ This was a design decision that was changed. When the user clicks on get directi
 - The icons on a marker’s pop up should match those that are used for the marker’s respective location card in the right side panel `complete`
 - The legend in the upper right hand corner of the map should include the image of the red marker icon and blue circle icon and show what each denotes (depending on if the user allows for location tracking). This legend should be present at all times on the map `revised`
    * **Revision**: The legend on the lower right hand corner of the map should include the image of the red marker icon and blue circle icon and show what each denotes (depending on if the user allows for location tracking). This legend should be present at all times on the map.
-   * **Reason:** On the map, the zoom buttons are on the upper right hand corner. We moved the legend to the lower right hand corner to 
+   * **Reason:** On the map, the zoom buttons are on the upper right hand corner. We moved the legend to the lower right hand corner to avoid covering the zoom controls.
 
 ## Performance
 - The page should be able to fully load in at least 3 minutes. `complete`
