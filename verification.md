@@ -28,7 +28,7 @@
 
 ### Location Ask 
 * The website must prompt the user if we can use their current location every time the page refreshes (each times the user refreshes the tab) with a popup in the top left corner of the map.
-    * Manual Testing: Load the page to check if a popup appears requesting user for their location permission. It should be at the top left corner of the map. We will refresh the page and check if the popup appears again after a refresh. This will be tested 20 times total on 4 different devices to ensure the popup will appear in different devices. 
+    * Manual Testing: Load the page to check if a popup appears requesting user for their location permission. It should be at the top left corner of the map. We will refresh the page and check if the popup appears again after a refresh. This will be tested 20 times total on 4 different devices and browers to ensure the popup will appear in different devices. 
 * If the user chooses “block”, the map remains as an overview of all of the UW Seattle campus, from Montlake cut to NE 45th st, with all bathrooms marked as markers on the map and in alphabetical order on the right side panel. 
     * Manual Testing: Load the website and choose to "block" the user's current location. Check that the map displays an overview of all of UW Seattle Campus from Montlake cut to NE 45th St. On the map, check that all bathrooms are marked as markers on the map. Check that the right side panel lists the bathrooms in alphabetical order based on building name. Check this 20 times total on 4 different devices.
 * If the user chooses “allow”, the map zooms in on their current location, which will be in the center of the map, showing a 1000 feet radius around their current location, with bathrooms marked as markers on the map that are within that 1000 feet radius. The right side panel will show the list of all bathrooms from nearest to farthest from the user’s current location.
@@ -109,7 +109,9 @@ Information on the details about the bathroom will include the building the bath
     * Manually click on a few random bathroom markers (about 20) from the map and check if the associated building is the same as what is shown in the popup
     * Manually click on a few random bathroom location card  (about 20) from the side panel and ensure if the associated building is the same as what is shown in the popup
 *  If there is no information on features at a specific bathroom (such as disabled access, key required, gender neutral/male/female bathroom), then the corresponding feature icons should be displayed in grey with “Information unavailable” text.
+    * Manually check bathrooms in which there is no information available, the icons must display "information unavailable" text next to the icon. 
 * Ensure that feature icons information that has “NA” in the API is displayed in grey color and has “information unavailable” text for explanation
+    * Manually check bathrooms containing any features with NA in the API. Check that the icons are displayed in grey and has "information unavailable." 
 * If the user clicks anywhere outside of the marker’s popup, the popup will go away and the marker will go back to its regular red color.
 This is unless another marker is clicked, in which case, the initial marker’s popup will go away and the initial marker will go back to its regular red color while the new marker’s popup will display and the new marker will change color to match the popup color.
     * Manually test by clicking outside of the marker’s popup area to ensure that the popup disappears and the bathroom marker goes back to its red color. Try clicking on various portions outside of the popup window to ensure this works. 
@@ -120,6 +122,7 @@ This is unless another marker is clicked, in which case, the initial marker’s 
 * The page should be able to fully load in 30 seconds.
     * Manual testing: Record the time from the click on the link to when the browser shows the page is fully load. Compare the time with the setted 30 seconds goal. (Check 20 times)
 * Anytime when a new filter is applied or an existing filter is removed, the map and the location cards should be refreshed within 1 second. (in filter section)
+    * Manual Testing: apply and remove filters manully, check the map and location cards are both fully refreshed and rendered within 1 secon. (Check 20 times)
 * Any click on the marker should respond with the details of the restroom in 5 seconds.
     * Manual testing: Record the time from the click on the marker to when the details of the restroom is shown. Compare the time with the setted 5 seconds goal. (Check 20 times)
 * Moving the map should move correspondingly within 1 second
