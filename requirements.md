@@ -79,7 +79,9 @@ This was a design decision that was changed. When the user clicks on get directi
 - The map will show the path of the directions to the building where the bathroom is located from the user’s current location marker with a blue line. `complete`
 - There will be a left arrow for users to exit the directions functionality in the right side panel. When clicked, the view must return to the initial view of displaying bathrooms. `complete`
 - If the user gave their location, the map will be centered on the user’s location with at least a 150 ft radius. As the user follows the path, the blue path line will start disappearing so that the blue line only connects the destination and the user’s current location. `revised`
+   * Revision: 
 - If the user takes a different path than the one given to them, the directions will recalibrate and show them a new list of instructions from their new location to the destination. `revised`
+   * Revision & Reason : We chose to omit this requirement. The Mapbox API was used for navigation. The navigation service does not follow the directions step by step, meaning, if the user goes far off the directed path, the API does not recalibrate the path.
 - If the user did not give their location, the map must show the starting location the user inputted, the bathroom destination, and the full path. `complete`
 
 ## Icons
