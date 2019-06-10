@@ -35,7 +35,7 @@
 
 ## What practices will you follow to improve your process if it's not working?
 
-- Have more meetings/check-ins to ensure work is getting completed after a few days of it getting assigned to a team member. Team members in our group tend to work best and be more focused when working at an environment of their own (such as at home alone, or in a coffee shop, or on the bed); however, if no progress is shown on assigned tasks, then we will have to enforce more meetings where we all meet and work together.  
+- Have more meetings/check-ins to ensure work is getting completed after a few days of it getting assigned to a team member. Team members in our group tend to work best and be more focused when working at an environment of their own (such as at home alone, or in a coffee shop, or on the bed); however, if no progress is shown on assigned tasks, then we will have to enforce more meetings where we all meet and work together in person.  
 - Have more meetings/check-ins to ensure work is getting completed after a few days of it getting assigned to a team member
 - Discussions 2 times/week to sort through errors/bugs that might hinder the completion of the work
 - IF necessary (if some team members are getting absolutely no work done on a weekly basis), daily dedicated group work-time with mandatory attendance from all members
